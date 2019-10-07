@@ -15,6 +15,9 @@
 		9E5426BC23445894003C769A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5426BA23445894003C769A /* LaunchScreen.storyboard */; };
 		9E5426C723445894003C769A /* HouseshareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426C623445894003C769A /* HouseshareTests.swift */; };
 		9E5426D223445894003C769A /* HouseshareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426D123445894003C769A /* HouseshareUITests.swift */; };
+		9E5426E323445C9A003C769A /* Bills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426E223445C9A003C769A /* Bills.swift */; };
+		9E5426E7234466F3003C769A /* BillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426E6234466F3003C769A /* BillViewModel.swift */; };
+		9E5426EB23446DC6003C769A /* BillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426EA23446DC6003C769A /* BillTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9E5426CD23445894003C769A /* HouseshareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseshareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5426D123445894003C769A /* HouseshareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseshareUITests.swift; sourceTree = "<group>"; };
 		9E5426D323445894003C769A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E5426E223445C9A003C769A /* Bills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bills.swift; sourceTree = "<group>"; };
+		9E5426E6234466F3003C769A /* BillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewModel.swift; sourceTree = "<group>"; };
+		9E5426EA23446DC6003C769A /* BillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,10 @@
 		9E5426AD23445891003C769A /* Houseshare */ = {
 			isa = PBXGroup;
 			children = (
+				9E5426E0234458B9003C769A /* ViewModel */,
+				9E5426E1234458C0003C769A /* View */,
+				9E5426DF2344589F003C769A /* Model */,
 				9E5426AE23445891003C769A /* AppDelegate.swift */,
-				9E5426B023445891003C769A /* ViewController.swift */,
-				9E5426B223445891003C769A /* Main.storyboard */,
 				9E5426B823445894003C769A /* Assets.xcassets */,
 				9E5426BA23445894003C769A /* LaunchScreen.storyboard */,
 				9E5426BD23445894003C769A /* Info.plist */,
@@ -126,6 +133,32 @@
 				9E5426D323445894003C769A /* Info.plist */,
 			);
 			path = HouseshareUITests;
+			sourceTree = "<group>";
+		};
+		9E5426DF2344589F003C769A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E5426E223445C9A003C769A /* Bills.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E5426E0234458B9003C769A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9E5426EA23446DC6003C769A /* BillTableViewController.swift */,
+				9E5426B023445891003C769A /* ViewController.swift */,
+				9E5426E6234466F3003C769A /* BillViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9E5426E1234458C0003C769A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E5426B223445891003C769A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5426E323445C9A003C769A /* Bills.swift in Sources */,
 				9E5426B723445891003C769A /* Houseshare.xcdatamodeld in Sources */,
+				9E5426E7234466F3003C769A /* BillViewModel.swift in Sources */,
 				9E5426B123445891003C769A /* ViewController.swift in Sources */,
+				9E5426EB23446DC6003C769A /* BillTableViewController.swift in Sources */,
 				9E5426AF23445891003C769A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
