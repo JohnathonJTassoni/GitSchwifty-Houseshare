@@ -18,6 +18,22 @@
 		9E5426E323445C9A003C769A /* Bills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426E223445C9A003C769A /* Bills.swift */; };
 		9E5426E7234466F3003C769A /* BillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426E6234466F3003C769A /* BillViewModel.swift */; };
 		9E5426EB23446DC6003C769A /* BillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426EA23446DC6003C769A /* BillTableViewController.swift */; };
+		9E62DC4A23502D2000BB07D1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62DC4923502D2000BB07D1 /* Profile.swift */; };
+		9E62DC4C23503BA800BB07D1 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62DC4B23503BA800BB07D1 /* ContactsTableViewController.swift */; };
+		9E62DC4E23503BF700BB07D1 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62DC4D23503BF700BB07D1 /* ContactsViewModel.swift */; };
+		9E6C37232352B62D005DFF73 /* PaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37222352B62D005DFF73 /* PaymentOption.swift */; };
+		9E6C37272352BD00005DFF73 /* ContactAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37262352BD00005DFF73 /* ContactAddViewController.swift */; };
+		9E6C37292352E11B005DFF73 /* PaymentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37282352E11B005DFF73 /* PaymentPopupViewController.swift */; };
+		9E6C372F2352EF94005DFF73 /* PaymentOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C372E2352EF94005DFF73 /* PaymentOptionCell.swift */; };
+		9E6C37312352FA21005DFF73 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37302352FA21005DFF73 /* ContactDetailViewController.swift */; };
+		9EB97D4C234D56AE00239ADA /* BillAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB97D4B234D56AE00239ADA /* BillAddViewController.swift */; };
+		9ECE37432359793F003B7E0C /* ChoreHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECE37422359793F003B7E0C /* ChoreHistoryViewController.swift */; };
+		9ECE37452359841E003B7E0C /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECE37442359841E003B7E0C /* ReminderViewController.swift */; };
+		9EEE68A22355D4BF00DB0968 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68A12355D4BE00DB0968 /* Chore.swift */; };
+		9EEE68A42355D66100DB0968 /* ChoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68A32355D66100DB0968 /* ChoreViewModel.swift */; };
+		9EEE68A92355DAF200DB0968 /* ChoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68A82355DAF200DB0968 /* ChoresTableViewController.swift */; };
+		9EEE68AD2355F5B300DB0968 /* MyChoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68AC2355F5B300DB0968 /* MyChoreTableViewController.swift */; };
+		9EEE68B12356D90D00DB0968 /* ChoreAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68B02356D90D00DB0968 /* ChoreAddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +71,22 @@
 		9E5426E223445C9A003C769A /* Bills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bills.swift; sourceTree = "<group>"; };
 		9E5426E6234466F3003C769A /* BillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewModel.swift; sourceTree = "<group>"; };
 		9E5426EA23446DC6003C769A /* BillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewController.swift; sourceTree = "<group>"; };
+		9E62DC4923502D2000BB07D1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		9E62DC4B23503BA800BB07D1 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		9E62DC4D23503BF700BB07D1 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		9E6C37222352B62D005DFF73 /* PaymentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentOption.swift; path = ../ViewModel/PaymentOption.swift; sourceTree = "<group>"; };
+		9E6C37262352BD00005DFF73 /* ContactAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddViewController.swift; sourceTree = "<group>"; };
+		9E6C37282352E11B005DFF73 /* PaymentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPopupViewController.swift; sourceTree = "<group>"; };
+		9E6C372E2352EF94005DFF73 /* PaymentOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionCell.swift; sourceTree = "<group>"; };
+		9E6C37302352FA21005DFF73 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		9EB97D4B234D56AE00239ADA /* BillAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillAddViewController.swift; sourceTree = "<group>"; };
+		9ECE37422359793F003B7E0C /* ChoreHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreHistoryViewController.swift; sourceTree = "<group>"; };
+		9ECE37442359841E003B7E0C /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		9EEE68A12355D4BE00DB0968 /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
+		9EEE68A32355D66100DB0968 /* ChoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewModel.swift; sourceTree = "<group>"; };
+		9EEE68A82355DAF200DB0968 /* ChoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresTableViewController.swift; sourceTree = "<group>"; };
+		9EEE68AC2355F5B300DB0968 /* MyChoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChoreTableViewController.swift; sourceTree = "<group>"; };
+		9EEE68B02356D90D00DB0968 /* ChoreAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreAddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +170,10 @@
 		9E5426DF2344589F003C769A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9E6C37222352B62D005DFF73 /* PaymentOption.swift */,
 				9E5426E223445C9A003C769A /* Bills.swift */,
+				9E62DC4923502D2000BB07D1 /* Profile.swift */,
+				9EEE68A12355D4BE00DB0968 /* Chore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,9 +181,22 @@
 		9E5426E0234458B9003C769A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9E5426EA23446DC6003C769A /* BillTableViewController.swift */,
 				9E5426B023445891003C769A /* ViewController.swift */,
 				9E5426E6234466F3003C769A /* BillViewModel.swift */,
+				9E5426EA23446DC6003C769A /* BillTableViewController.swift */,
+				9EB97D4B234D56AE00239ADA /* BillAddViewController.swift */,
+				9E62DC4D23503BF700BB07D1 /* ContactsViewModel.swift */,
+				9E62DC4B23503BA800BB07D1 /* ContactsTableViewController.swift */,
+				9E6C37302352FA21005DFF73 /* ContactDetailViewController.swift */,
+				9E6C37262352BD00005DFF73 /* ContactAddViewController.swift */,
+				9E6C37282352E11B005DFF73 /* PaymentPopupViewController.swift */,
+				9E6C372E2352EF94005DFF73 /* PaymentOptionCell.swift */,
+				9EEE68A32355D66100DB0968 /* ChoreViewModel.swift */,
+				9EEE68A82355DAF200DB0968 /* ChoresTableViewController.swift */,
+				9EEE68B02356D90D00DB0968 /* ChoreAddViewController.swift */,
+				9EEE68AC2355F5B300DB0968 /* MyChoreTableViewController.swift */,
+				9ECE37422359793F003B7E0C /* ChoreHistoryViewController.swift */,
+				9ECE37442359841E003B7E0C /* ReminderViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,12 +340,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEE68AD2355F5B300DB0968 /* MyChoreTableViewController.swift in Sources */,
+				9EEE68A92355DAF200DB0968 /* ChoresTableViewController.swift in Sources */,
+				9ECE37432359793F003B7E0C /* ChoreHistoryViewController.swift in Sources */,
 				9E5426E323445C9A003C769A /* Bills.swift in Sources */,
+				9E62DC4E23503BF700BB07D1 /* ContactsViewModel.swift in Sources */,
+				9E6C37312352FA21005DFF73 /* ContactDetailViewController.swift in Sources */,
+				9EEE68A22355D4BF00DB0968 /* Chore.swift in Sources */,
+				9E62DC4A23502D2000BB07D1 /* Profile.swift in Sources */,
+				9ECE37452359841E003B7E0C /* ReminderViewController.swift in Sources */,
+				9EB97D4C234D56AE00239ADA /* BillAddViewController.swift in Sources */,
+				9EEE68A42355D66100DB0968 /* ChoreViewModel.swift in Sources */,
 				9E5426B723445891003C769A /* Houseshare.xcdatamodeld in Sources */,
 				9E5426E7234466F3003C769A /* BillViewModel.swift in Sources */,
+				9EEE68B12356D90D00DB0968 /* ChoreAddViewController.swift in Sources */,
 				9E5426B123445891003C769A /* ViewController.swift in Sources */,
 				9E5426EB23446DC6003C769A /* BillTableViewController.swift in Sources */,
+				9E6C37232352B62D005DFF73 /* PaymentOption.swift in Sources */,
+				9E6C372F2352EF94005DFF73 /* PaymentOptionCell.swift in Sources */,
 				9E5426AF23445891003C769A /* AppDelegate.swift in Sources */,
+				9E6C37292352E11B005DFF73 /* PaymentPopupViewController.swift in Sources */,
+				9E62DC4C23503BA800BB07D1 /* ContactsTableViewController.swift in Sources */,
+				9E6C37272352BD00005DFF73 /* ContactAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5A3379GJZ6;
 				INFOPLIST_FILE = Houseshare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5A3379GJZ6;
 				INFOPLIST_FILE = Houseshare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

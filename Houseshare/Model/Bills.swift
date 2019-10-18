@@ -12,14 +12,14 @@ import Foundation
 class Bills
 {
     private (set) var type:billType
-    private (set) var dueDate:String
+    private (set) var dueDate:Date
     private (set) var amount:Double
     
-    init(type:billType, dueDate:String, amount:Double)
+    init(type:billType, dueDate:Date, amount:Double)
     {
-        self.type = type;
+        self.type = type
+        self.amount = amount
         self.dueDate = dueDate;
-        self.amount = amount;
     }
     
     func details() -> String
@@ -29,17 +29,22 @@ class Bills
 }
 
 
-enum billType:String
+enum billType:String, CaseIterable
 {
-    case Internet = "Internet", Power = "Power", Rent = "Rent", Gas = "Gas", Other = "Other"
+    case Internet = "Internet", Power = "Power", Water = "Water", Rent = "Rent", Gas = "Gas", Other = "Other"
+    
+    var logo:String
+    {
+        switch self
+        {
+            case .Internet: return "internet"
+            case .Power: return "power"
+            case .Water: return "water"
+            case .Rent: return "rent"
+            case .Gas: return "gas"
+            case .Other: return "money"
+        }
+    }
 }
-
-
-
-
-
-
-//var newBill = Bills(type: .Internet, dueDate:"12/2/2019", amount:99.99)
-
 
 
