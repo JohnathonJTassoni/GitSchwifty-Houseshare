@@ -15,8 +15,8 @@ class ReminderViewController: UIViewController
     let choreViewModel = ChoreViewModel()
     let billViewModel = BillViewModel()
     
-    private (set) var reminders:[String:Any?] = [:]
-    
+    private (set) var bills:[Bills] = []
+    private (set) var chores:[Chore] = []
     @IBOutlet weak var reminderTableView: UITableView!
     
     override func viewDidLoad()
@@ -26,18 +26,38 @@ class ReminderViewController: UIViewController
         reminderTableView.delegate = self
         reminderTableView.dataSource = self
         
-        for chore in choreViewModel.getActiveChores()
+        bills = billViewModel.bills
+        chores = choreViewModel.getActiveChores()
+        
+    }
+    
+    func getDate(dueDate: Date) -> String
+    {
+        
+        var message:String = ""
+        let calendar = Calendar.current
+        let requestedComponent: Set<Calendar.Component> = [ .month, .day, .hour]
+        
+        
+        var date = DateComponents()
+        date.day = calendar.component(.day, from: Date())
+        date.month = calendar.component(.month, from: Date())
+        date.year = calendar.component(.year, from: Date())
+        
+        let timeDifference = calendar.dateComponents(requestedComponent, from: dueDate, to: calendar.date(from: date)!)
+        
+        if timeDifference.day! > 0
         {
-            reminders.updateValue(chore, forKey: "Chores")
+            message = "Due in \(timeDifference.day!) days."
+        }
+        else
+        {
+            message = "Your bill is overdue."
         }
 
         
-        for bill in billViewModel.bills
-        {
-            reminders.updateValue(bill, forKey: "Bills")
-     
-        }
-
+        
+        return message
     }
 }
 
@@ -46,7 +66,7 @@ extension ReminderViewController: UITableViewDelegate, UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int
     {
-        return self.reminders.keys.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
@@ -61,31 +81,13 @@ extension ReminderViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        var count:Int = 0
-        
         switch(section)
         {
-            case 0:  for object in reminders
-            {
-                
-                if object.key == "Chores"
-                {
-                    count+=1;
-                }
-                
-            }
-            case 1: for object in reminders
-            {
-                if object.key == "Bills"
-                {
-                    count+=1;
-                }
-                
-            }
+            case 0: return chores.count
+            case 1: return bills.count
             default: return 0
         }
-        
-        return count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -93,47 +95,40 @@ extension ReminderViewController: UITableViewDelegate, UITableViewDataSource
         let formattedDate = DateFormatter()
         formattedDate.setLocalizedDateFormatFromTemplate("ddMMYYYY")
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderCell", for: indexPath)
         
         switch(indexPath.section)
         {
         case 0:
-            for(key, value) in reminders
-            {
-                if key == "Chores"
-                {
-                    let value = value as? Chore
+                    let object = chores[indexPath.row]
                     let name = cell.viewWithTag(1000) as? UILabel?
                     let assigned = cell.viewWithTag(1001) as? UILabel?
                     let date = cell.viewWithTag(1002) as? UILabel?
                     
                     if let name = name, let assigned = assigned, let date = date
                     {
-                        name?.text = value?.choreName
-                        assigned?.text = value?.assignedUser
-                        date?.text = "Due: \(formattedDate.string(from: value!.dueDate))"
+                        name?.text = object.choreName
+                        assigned?.text = object.assignedUser
+                        date?.text = "\(getDate(dueDate: object.dueDate))"
+                        
                         
                     }
-                }
-            }
+            
+            
         case 1:
-            for(key, value) in reminders
-            {
-                if key == "Bills"
-                {
-                    let value = value as? Bills
+                    let object = bills[indexPath.row]
                     let name = cell.viewWithTag(1000) as? UILabel?
                     let amount = cell.viewWithTag(1001) as? UILabel?
                     let date = cell.viewWithTag(1002) as? UILabel?
                     
                     if let name = name, let amount = amount, let date = date
                     {
-                        name?.text = value?.type.rawValue
-                        amount?.text = "$\(value!.amount)"
-                        date?.text = "Due: \(formattedDate.string(from: value!.dueDate))"
+                        name?.text = object.type.rawValue
+                        amount?.text = "$\(object.amount)"
+                        date?.text = "\(getDate(dueDate: object.dueDate))"
                     }
-                }
-            }
+        
+            
         default: return cell
         }
      

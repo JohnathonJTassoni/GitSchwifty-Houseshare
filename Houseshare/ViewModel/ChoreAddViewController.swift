@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChoreAddViewController: UIViewController
+class ChoreAddViewController: UIViewController, UITextFieldDelegate
 {
 
     private var viewModel = ContactsViewModel()
@@ -26,6 +26,7 @@ class ChoreAddViewController: UIViewController
         super.viewDidLoad()
         assignmentPicker.delegate = self
         assignmentPicker.dataSource = self
+        choreNameField.delegate? = self
     }
     
     
@@ -50,6 +51,12 @@ class ChoreAddViewController: UIViewController
     @IBAction func cancel(_ sender: Any)
     {
         dismiss(animated: true, completion: nil)
+    }
+    
+    //Remove keyboard when another part of the storyboard is tappped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
     }
     
 }

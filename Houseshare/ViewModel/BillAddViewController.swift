@@ -8,21 +8,13 @@
 
 import UIKit
 
-class BillAddViewController: UIViewController
+class BillAddViewController: UIViewController, UITextFieldDelegate
 {
     //delegate property to connect to the
     //table view controller
     var delegate:AddBillDelegate?
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-        //Datasource and delegation will be handled by this clase
-        //Extension below.
-        billPicker.delegate = self
-        billPicker.dataSource = self
-    }
+   
     
     override func didReceiveMemoryWarning()
     {
@@ -54,11 +46,28 @@ class BillAddViewController: UIViewController
          
         dismiss(animated: true, completion: nil)
     }
- 
+    
+    //Remove keyboard when another part of the storyboard is tappped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
+    }
+
     
     @IBAction func cancel(_ sender: Any)
     {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        //Datasource and delegation will be handled by this clase
+        //Extension below.
+        billPicker.delegate = self
+        billPicker.dataSource = self
+        billAmount.delegate? = self
     }
     
    

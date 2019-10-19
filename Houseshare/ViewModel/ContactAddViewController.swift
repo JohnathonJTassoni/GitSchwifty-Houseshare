@@ -14,7 +14,7 @@ protocol PaymentMethodDelegate
     func addPaymentOption(paymentOption: PaymentOption)
 }
 
-class ContactAddViewController: UIViewController, PaymentMethodDelegate
+class ContactAddViewController: UIViewController, PaymentMethodDelegate, UITextFieldDelegate
 {
     //All the outlets
     @IBOutlet weak var paymentOptionTable: UITableView!
@@ -40,6 +40,12 @@ class ContactAddViewController: UIViewController, PaymentMethodDelegate
         paymentOptionTable.delegate = self
         genderPicker.dataSource = self
         genderPicker.delegate = self
+        
+        firstNameField.delegate? = self
+        lastnNameField.delegate? = self
+        emailField.delegate? = self
+        pnumField.delegate? = self
+        
     }
     
     override func didReceiveMemoryWarning()
@@ -98,6 +104,12 @@ class ContactAddViewController: UIViewController, PaymentMethodDelegate
     @IBAction func cancel(_ sender: Any)
     {
         dismiss(animated: true, completion: nil)
+    }
+    
+    //Remove keyboard when another part of the storyboard is tappped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
     }
     
 }
