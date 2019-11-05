@@ -11,7 +11,8 @@ import UIKit
 class ChoreAddViewController: UIViewController, UITextFieldDelegate
 {
 
-    private var viewModel = ContactsViewModel()
+    private var choreViewModel = ChoreViewModel()
+    private var contactViewModel = ContactsViewModel()
     var delegate: ChoreDelegate?
     
     @IBOutlet weak var choreNameField: UITextField!
@@ -38,10 +39,9 @@ class ChoreAddViewController: UIViewController, UITextFieldDelegate
             print("Delegating....")
         
             //Create the new bill, and pass it to the add bill protocol
-            let assignedUser = viewModel.profiles[assignmentPicker.selectedRow(inComponent: 0)]
-            let fullname = "\(assignedUser.fname) \(assignedUser.lname)"
-            let choreToAdd = Chore(choreName: choreName, dueDate: datePicker.date, assignedUser: fullname)
-            delegate?.addChore(newChore: choreToAdd)
+
+            let assignedUser = contactViewModel.getProfile(byIndex: assignmentPicker.selectedRow(inComponent: 0))
+            delegate?.addChore(choreName, datePicker.date, assignedUser)
         }
         
         dismiss(animated: true, completion: nil)
@@ -65,10 +65,11 @@ class ChoreAddViewController: UIViewController, UITextFieldDelegate
 
 extension ChoreAddViewController: UIPickerViewDataSource, UIPickerViewDelegate
 {
+    
     //Number of rows
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        return viewModel.profiles.count
+        return contactViewModel.count
     }
     
     //Number of componenets
@@ -80,8 +81,7 @@ extension ChoreAddViewController: UIPickerViewDataSource, UIPickerViewDelegate
     //returns the all possible values of the profiles in the viewmodel
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-
-        return "\(viewModel.getProfile(byIndex: row).fname) \(viewModel.getProfile(byIndex: row).lname)"
+        return "\(contactViewModel.getProfile(byIndex: row).fname!) \(contactViewModel.getProfile(byIndex: row).lname!)"
 
     }
 }

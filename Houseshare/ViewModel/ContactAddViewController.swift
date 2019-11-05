@@ -11,11 +11,15 @@ import Foundation
 
 protocol PaymentMethodDelegate
 {
-    func addPaymentOption(paymentOption: PaymentOption)
+    func addPaymentOption(_ bsb:String, _ accName:String, _ accNum:String)
 }
 
 class ContactAddViewController: UIViewController, PaymentMethodDelegate, UITextFieldDelegate
 {
+    private var viewModel = ContactsViewModel()
+    
+    private var payViewModel = PaymentOptionsViewModel()
+    
     //All the outlets
     @IBOutlet weak var paymentOptionTable: UITableView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -35,6 +39,7 @@ class ContactAddViewController: UIViewController, PaymentMethodDelegate, UITextF
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         //Assign the tables data and delegation
         paymentOptionTable.dataSource = self
         paymentOptionTable.delegate = self
@@ -58,25 +63,14 @@ class ContactAddViewController: UIViewController, PaymentMethodDelegate, UITextF
     @IBAction func submit(_ sender: Any)
     {
         //Unwrap the need fields
-        if let fname = firstNameField.text, let lname = lastnNameField.text, let email = emailField.text, let pnum = pnumField.text
+        if let fname = firstNameField.text, let lname = lastnNameField.text, let email = emailField.text, let pnum = pnumField.text, let profileImage = profileImage
         {
             print("Delegating new contact....")
             
             //Get the gender from the gender picker
             let gender = Gender.allCases[genderPicker.selectedRow(inComponent: 0)]
             
-            //Create new profile, with the vars needed, then use the update for the rest
-            let newProfile = Profile(fname: fname, lname: lname, gender: gender, userImage: profileImage.image)
-            newProfile.updateDetails(email:email, pnum:pnum)
-            
-            //Add the payment options, this will add all from the array
-            for payOption in paymentOptionArray
-            {
-                newProfile.addPaymentDetails(BSB: payOption.BSB, accNum: payOption.accNum, accName: payOption.accName)
-            }
-            
-            //add the new contact to the array
-            delegate?.addContact(profile: newProfile)
+            delegate?.addContact(profileImage.image!, fname, lname, gender, email, pnum, paymentOptionArray)
         }
         
         dismiss(animated: true, completion: nil)
@@ -94,9 +88,12 @@ class ContactAddViewController: UIViewController, PaymentMethodDelegate, UITextF
     }
     
     //add Payment option protocol
-    func addPaymentOption(paymentOption: PaymentOption)
+    func addPaymentOption(_ bsb:String, _ accName:String, _ accNum:String)
     {
-        paymentOptionArray.append(paymentOption)
+        //paymentOptionArray.append(paymentOption)
+        
+        payViewModel.addPaymentOption(accName, bsb, accNum)
+        paymentOptionArray = payViewModel.newPaymentOptions()
         paymentOptionTable.reloadData()
     }
     
@@ -121,7 +118,7 @@ extension ContactAddViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         //we will return the count
-        return paymentOptionArray.count
+        return payViewModel.newPaymentOptions().count
 
     }
     
@@ -132,8 +129,8 @@ extension ContactAddViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "payCell") as! PaymentOptionCell
         
         //Assigning the acc num and name that is the current index
-        cell.nameLabel.text = paymentOptionArray[indexPath.row].accName
-        cell.numLabel.text = paymentOptionArray[indexPath.row].accNum
+        cell.nameLabel.text = payViewModel.newPaymentOptions()[indexPath.row].accName
+        cell.numLabel.text = payViewModel.newPaymentOptions()[indexPath.row].accNum
         
         return cell
     }
@@ -186,8 +183,9 @@ extension ContactAddViewController: UIImagePickerControllerDelegate, UINavigatio
         {
             //Set the image in the outlet and hide the text
             profileImage.image = image
+            profileImage.alpha = 1
             imageButton.setTitle( "", for: .normal)
-            imageButton.alpha = 0
+            
         }
         
         picker.dismiss(animated: true, completion: nil)

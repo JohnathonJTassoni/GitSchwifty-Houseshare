@@ -11,7 +11,7 @@ import UIKit
 
 protocol AddContactDelegate
 {
-    func addContact(profile: Profile)
+    func addContact(_ userImage: UIImage, _ fname: String, _ lname: String, _ gender:Gender, _ email:String?, _ pnum:String?, _ paymentOptions:[PaymentOption]?)
 }
 
 class ContactsTableViewController: UITableViewController, AddContactDelegate
@@ -44,9 +44,9 @@ class ContactsTableViewController: UITableViewController, AddContactDelegate
     }
     
     //calls the protocol function
-    func addContact(profile: Profile)
+    func addContact(_ userImage: UIImage, _ fname: String, _ lname: String, _ gender:Gender, _ email:String?, _ pnum:String?, _ paymentOptions:[PaymentOption]?)
     {
-        viewModel.addProfile(newProfile: profile)
+        viewModel.addProfile(userImage, fname, lname, gender, email, pnum, paymentOptions)
         //refresh the view so we can see the new bill added
         self.loadView()
     }
@@ -100,22 +100,49 @@ class ContactsTableViewController: UITableViewController, AddContactDelegate
             let currentProfile = viewModel.getProfile(byIndex: indexPath.row)
             
             //setting the storyboard elements to the data that we are getting from the model
-            if let Email = currentProfile.getProfileSummary().email
+            if let Email = currentProfile.email
             {
                 email.text = Email
             }
             
-            if let image = currentProfile.getProfileSummary().userImage
-            {
-                profilePic.image = image
-            }
+            let image = UIImage(data: currentProfile.userImage! as Data)
             
-            fullName.text = "\(currentProfile.getProfileSummary().fname) \(currentProfile.getProfileSummary().lname)"
+            profilePic.image = image
+            fullName.text = "\(currentProfile.fname!) \(currentProfile.lname!)"
             
         }
         
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+    {
+        let editButton = UITableViewRowAction(style: .normal, title: "Edit") {(rowAction, indexPath) in self.contactEditPopover(indexPath.row); self.tableView.reloadData()}
+        
+        let deleteButton = UITableViewRowAction(style: .normal, title: "Delete") {(rowAction, indexPath) in self.viewModel.removeProfile(index:indexPath.row); self.tableView.reloadData()}
+        
+        editButton.backgroundColor = UIColor.green
+        deleteButton.backgroundColor = UIColor.red
+        
+        return[deleteButton,editButton]
+    }
+    
+    func contactEditPopover(_ index:Int)
+    {
+        // grab the view controller we want to show
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "EditContact") as! ContactEditPopover
+        
+        vc.modalPresentationStyle = .popover
+        vc.index = index
+        
+        present(vc, animated: true, completion: self.tableView.reloadData)
+    }
     
 }

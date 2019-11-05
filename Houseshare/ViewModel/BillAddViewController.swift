@@ -14,8 +14,6 @@ class BillAddViewController: UIViewController, UITextFieldDelegate
     //table view controller
     var delegate:AddBillDelegate?
     
-   
-    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -40,8 +38,7 @@ class BillAddViewController: UIViewController, UITextFieldDelegate
             print("Delegating....")
             
             //Create the new bill, and pass it to the add bill protocol
-            let billToAdd = Bills(type: type, dueDate: datePicker.date, amount: amount)
-            delegate?.addNewBill(bill: billToAdd)
+            delegate?.addNewBill(type, datePicker.date, amount)
         }
          
         dismiss(animated: true, completion: nil)
@@ -62,15 +59,12 @@ class BillAddViewController: UIViewController, UITextFieldDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         //Datasource and delegation will be handled by this clase
         //Extension below.
         billPicker.delegate = self
         billPicker.dataSource = self
         billAmount.delegate? = self
     }
-    
-   
 }
 
 

@@ -37,10 +37,10 @@ class HouseshareUITests: XCTestCase {
         
     }
     
-  
     func testCreateBillLoaded()
     {
         //Check to see if we can add a new bill, click submit and have the bill appear in the Table View
+        //if the bill has been created successfully there should be 5 in the table
         
         XCUIApplication().tabBars.buttons["Bills"].tap()
         XCUIApplication().navigationBars["Bills"].buttons["Add Bill"].tap()
@@ -57,11 +57,12 @@ class HouseshareUITests: XCTestCase {
         //If there are 5 bills, a new bill has been added
         XCTAssertEqual(XCUIApplication().tables.cells.count, 5)
 
-        
     }
     
     func testCreateChoreLoaded()
     {
+        //Check to see if we can add a new chore, click submit and have the chore appear in the Table View
+        //if the chore has been created successfully there should be 3 in the table
         
         XCUIApplication().tabBars.buttons["Chores"].tap()
         XCUIApplication().navigationBars["Chores"].buttons["Add"].tap()
@@ -79,6 +80,8 @@ class HouseshareUITests: XCTestCase {
     
     func testCreateContactLoaded()
     {
+        //Check to see if we can add a new Contacts, click submit and have the new contact appear in the Table View
+        //if the contact has been created successfully there should be 5 in the table
         
         XCUIApplication().tabBars.buttons["Contacts"].tap()
         XCUIApplication().navigationBars["Contacts"].buttons["Add"].tap()
@@ -90,20 +93,14 @@ class HouseshareUITests: XCTestCase {
         sleep(3)
         XCUIApplication().textFields["Surename"].typeText("Doe")
         sleep(2)
-        XCUIApplication().staticTexts["First Name"].tap()
         
         XCUIApplication().buttons["Submit"].tap()
         
         XCTAssertEqual(XCUIApplication().tables.cells.count, 5)
 
-        
     }
     
-    func testLoadProfileDetail()
-    {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    
 
     func testExample() {
         // Use recording to get started writing UI tests.

@@ -3,37 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07B2F82FA0B9B3EC8622FCC8 /* Pods_Houseshare_HouseshareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1D7701589EDE9F173D7322 /* Pods_Houseshare_HouseshareUITests.framework */; };
+		28E5FC756BA2673A8B6F5269 /* Pods_HouseshareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27F9CE1CE94C1A2C3C61B21 /* Pods_HouseshareTests.framework */; };
+		9E096992235BFE0D004C0FF8 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E096991235BFE0D004C0FF8 /* AppIcon.png */; };
+		9E096994235BFEDC004C0FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E096993235BFEDC004C0FF8 /* Assets.xcassets */; };
+		9E096996235C2ABF004C0FF8 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E096995235C2ABF004C0FF8 /* AboutUsViewController.swift */; };
+		9E4E5004235ECF8500837A5B /* PaymentOption+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E4FFC235ECF8500837A5B /* PaymentOption+CoreDataClass.swift */; };
+		9E4E5005235ECF8500837A5B /* PaymentOption+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E4FFD235ECF8500837A5B /* PaymentOption+CoreDataProperties.swift */; };
+		9E4E5006235ECF8500837A5B /* Bills+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E4FFE235ECF8500837A5B /* Bills+CoreDataClass.swift */; };
+		9E4E5007235ECF8500837A5B /* Bills+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E4FFF235ECF8500837A5B /* Bills+CoreDataProperties.swift */; };
+		9E4E5008235ECF8500837A5B /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E5000235ECF8500837A5B /* Profile+CoreDataClass.swift */; };
+		9E4E5009235ECF8500837A5B /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E5001235ECF8500837A5B /* Profile+CoreDataProperties.swift */; };
+		9E4E500A235ECF8500837A5B /* Chore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E5002235ECF8500837A5B /* Chore+CoreDataClass.swift */; };
+		9E4E500B235ECF8500837A5B /* Chore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E5003235ECF8500837A5B /* Chore+CoreDataProperties.swift */; };
+		9E4E500D235ED71400837A5B /* BillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E500C235ED71400837A5B /* BillManager.swift */; };
+		9E4E500F235ED93F00837A5B /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4E500E235ED93F00837A5B /* ContactsManager.swift */; };
 		9E5426AF23445891003C769A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426AE23445891003C769A /* AppDelegate.swift */; };
 		9E5426B123445891003C769A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426B023445891003C769A /* ViewController.swift */; };
 		9E5426B423445891003C769A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5426B223445891003C769A /* Main.storyboard */; };
 		9E5426B723445891003C769A /* Houseshare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426B523445891003C769A /* Houseshare.xcdatamodeld */; };
-		9E5426B923445894003C769A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E5426B823445894003C769A /* Assets.xcassets */; };
 		9E5426BC23445894003C769A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5426BA23445894003C769A /* LaunchScreen.storyboard */; };
 		9E5426C723445894003C769A /* HouseshareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426C623445894003C769A /* HouseshareTests.swift */; };
 		9E5426D223445894003C769A /* HouseshareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426D123445894003C769A /* HouseshareUITests.swift */; };
-		9E5426E323445C9A003C769A /* Bills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426E223445C9A003C769A /* Bills.swift */; };
 		9E5426E7234466F3003C769A /* BillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426E6234466F3003C769A /* BillViewModel.swift */; };
 		9E5426EB23446DC6003C769A /* BillTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5426EA23446DC6003C769A /* BillTableViewController.swift */; };
-		9E62DC4A23502D2000BB07D1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62DC4923502D2000BB07D1 /* Profile.swift */; };
 		9E62DC4C23503BA800BB07D1 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62DC4B23503BA800BB07D1 /* ContactsTableViewController.swift */; };
 		9E62DC4E23503BF700BB07D1 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62DC4D23503BF700BB07D1 /* ContactsViewModel.swift */; };
-		9E6C37232352B62D005DFF73 /* PaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37222352B62D005DFF73 /* PaymentOption.swift */; };
 		9E6C37272352BD00005DFF73 /* ContactAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37262352BD00005DFF73 /* ContactAddViewController.swift */; };
 		9E6C37292352E11B005DFF73 /* PaymentPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37282352E11B005DFF73 /* PaymentPopupViewController.swift */; };
 		9E6C372F2352EF94005DFF73 /* PaymentOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C372E2352EF94005DFF73 /* PaymentOptionCell.swift */; };
 		9E6C37312352FA21005DFF73 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C37302352FA21005DFF73 /* ContactDetailViewController.swift */; };
+		9E9B682E236FADAD006CAEE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E9B682D236FADAD006CAEE5 /* GoogleService-Info.plist */; };
 		9EB97D4C234D56AE00239ADA /* BillAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB97D4B234D56AE00239ADA /* BillAddViewController.swift */; };
+		9EC71BF7235FF52600F7C810 /* ChoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC71BF6235FF52600F7C810 /* ChoreManager.swift */; };
+		9EC71BFB2360354E00F7C810 /* PaymentOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC71BFA2360354E00F7C810 /* PaymentOptionsViewModel.swift */; };
+		9EC71BFF2361577B00F7C810 /* PaymentOptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC71BFE2361577B00F7C810 /* PaymentOptionManager.swift */; };
+		9EC71C052361DB0800F7C810 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC71C042361DB0800F7C810 /* FileViewController.swift */; };
+		9EC71C072362A0D500F7C810 /* ContactEditPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC71C062362A0D500F7C810 /* ContactEditPopover.swift */; };
 		9ECE37432359793F003B7E0C /* ChoreHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECE37422359793F003B7E0C /* ChoreHistoryViewController.swift */; };
 		9ECE37452359841E003B7E0C /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECE37442359841E003B7E0C /* ReminderViewController.swift */; };
-		9EEE68A22355D4BF00DB0968 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68A12355D4BE00DB0968 /* Chore.swift */; };
 		9EEE68A42355D66100DB0968 /* ChoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68A32355D66100DB0968 /* ChoreViewModel.swift */; };
 		9EEE68A92355DAF200DB0968 /* ChoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68A82355DAF200DB0968 /* ChoresTableViewController.swift */; };
 		9EEE68AD2355F5B300DB0968 /* MyChoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68AC2355F5B300DB0968 /* MyChoreTableViewController.swift */; };
 		9EEE68B12356D90D00DB0968 /* ChoreAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEE68B02356D90D00DB0968 /* ChoreAddViewController.swift */; };
+		D1C5459F298552E0B80889E3 /* Pods_Houseshare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC7C435CD17F2A49B590B39 /* Pods_Houseshare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +71,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A953CCC7B90D7B275EF57A9 /* Pods-HouseshareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseshareTests.debug.xcconfig"; path = "Target Support Files/Pods-HouseshareTests/Pods-HouseshareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3D1D7701589EDE9F173D7322 /* Pods_Houseshare_HouseshareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Houseshare_HouseshareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A323DB58BE8E2491449A515 /* Pods-HouseshareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouseshareTests.release.xcconfig"; path = "Target Support Files/Pods-HouseshareTests/Pods-HouseshareTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BB60FE5D9AA7F5C84ABCCA2 /* Pods-Houseshare-HouseshareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Houseshare-HouseshareUITests.release.xcconfig"; path = "Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		879B84F9F6ABABDB9BF9ED40 /* Pods-Houseshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Houseshare.debug.xcconfig"; path = "Target Support Files/Pods-Houseshare/Pods-Houseshare.debug.xcconfig"; sourceTree = "<group>"; };
+		8F2BB5659ABD1EE73FA2EE2E /* Pods-Houseshare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Houseshare.release.xcconfig"; path = "Target Support Files/Pods-Houseshare/Pods-Houseshare.release.xcconfig"; sourceTree = "<group>"; };
+		9E096991235BFE0D004C0FF8 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		9E096993235BFEDC004C0FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E096995235C2ABF004C0FF8 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		9E4E4FFC235ECF8500837A5B /* PaymentOption+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentOption+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9E4E4FFD235ECF8500837A5B /* PaymentOption+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentOption+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9E4E4FFE235ECF8500837A5B /* Bills+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bills+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9E4E4FFF235ECF8500837A5B /* Bills+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bills+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9E4E5000235ECF8500837A5B /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9E4E5001235ECF8500837A5B /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9E4E5002235ECF8500837A5B /* Chore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9E4E5003235ECF8500837A5B /* Chore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9E4E500C235ED71400837A5B /* BillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillManager.swift; sourceTree = "<group>"; };
+		9E4E500E235ED93F00837A5B /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		9E5426AB23445891003C769A /* Houseshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Houseshare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5426AE23445891003C769A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E5426B023445891003C769A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E5426B323445891003C769A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E5426B623445891003C769A /* Houseshare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Houseshare.xcdatamodel; sourceTree = "<group>"; };
-		9E5426B823445894003C769A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E5426BB23445894003C769A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E5426BD23445894003C769A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E5426C223445894003C769A /* HouseshareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseshareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,25 +103,30 @@
 		9E5426CD23445894003C769A /* HouseshareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouseshareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5426D123445894003C769A /* HouseshareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseshareUITests.swift; sourceTree = "<group>"; };
 		9E5426D323445894003C769A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E5426E223445C9A003C769A /* Bills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bills.swift; sourceTree = "<group>"; };
 		9E5426E6234466F3003C769A /* BillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewModel.swift; sourceTree = "<group>"; };
 		9E5426EA23446DC6003C769A /* BillTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewController.swift; sourceTree = "<group>"; };
-		9E62DC4923502D2000BB07D1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9E62DC4B23503BA800BB07D1 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		9E62DC4D23503BF700BB07D1 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
-		9E6C37222352B62D005DFF73 /* PaymentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentOption.swift; path = ../ViewModel/PaymentOption.swift; sourceTree = "<group>"; };
 		9E6C37262352BD00005DFF73 /* ContactAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddViewController.swift; sourceTree = "<group>"; };
 		9E6C37282352E11B005DFF73 /* PaymentPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPopupViewController.swift; sourceTree = "<group>"; };
 		9E6C372E2352EF94005DFF73 /* PaymentOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionCell.swift; sourceTree = "<group>"; };
 		9E6C37302352FA21005DFF73 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		9E9B682D236FADAD006CAEE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EB97D4B234D56AE00239ADA /* BillAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillAddViewController.swift; sourceTree = "<group>"; };
+		9EC71BF6235FF52600F7C810 /* ChoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreManager.swift; sourceTree = "<group>"; };
+		9EC71BFA2360354E00F7C810 /* PaymentOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionsViewModel.swift; sourceTree = "<group>"; };
+		9EC71BFE2361577B00F7C810 /* PaymentOptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionManager.swift; sourceTree = "<group>"; };
+		9EC71C042361DB0800F7C810 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		9EC71C062362A0D500F7C810 /* ContactEditPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditPopover.swift; sourceTree = "<group>"; };
+		9EC7C435CD17F2A49B590B39 /* Pods_Houseshare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Houseshare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ECE37422359793F003B7E0C /* ChoreHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreHistoryViewController.swift; sourceTree = "<group>"; };
 		9ECE37442359841E003B7E0C /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
-		9EEE68A12355D4BE00DB0968 /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
 		9EEE68A32355D66100DB0968 /* ChoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreViewModel.swift; sourceTree = "<group>"; };
 		9EEE68A82355DAF200DB0968 /* ChoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresTableViewController.swift; sourceTree = "<group>"; };
 		9EEE68AC2355F5B300DB0968 /* MyChoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChoreTableViewController.swift; sourceTree = "<group>"; };
 		9EEE68B02356D90D00DB0968 /* ChoreAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreAddViewController.swift; sourceTree = "<group>"; };
+		B27F9CE1CE94C1A2C3C61B21 /* Pods_HouseshareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouseshareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF43DAA3E70D8E282C5F09A2 /* Pods-Houseshare-HouseshareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Houseshare-HouseshareUITests.debug.xcconfig"; path = "Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C5459F298552E0B80889E3 /* Pods_Houseshare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E5FC756BA2673A8B6F5269 /* Pods_HouseshareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +150,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B2F82FA0B9B3EC8622FCC8 /* Pods_Houseshare_HouseshareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F079C5DF708B879CCFC2F85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				879B84F9F6ABABDB9BF9ED40 /* Pods-Houseshare.debug.xcconfig */,
+				8F2BB5659ABD1EE73FA2EE2E /* Pods-Houseshare.release.xcconfig */,
+				EF43DAA3E70D8E282C5F09A2 /* Pods-Houseshare-HouseshareUITests.debug.xcconfig */,
+				7BB60FE5D9AA7F5C84ABCCA2 /* Pods-Houseshare-HouseshareUITests.release.xcconfig */,
+				1A953CCC7B90D7B275EF57A9 /* Pods-HouseshareTests.debug.xcconfig */,
+				6A323DB58BE8E2491449A515 /* Pods-HouseshareTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9E5426A223445891003C769A = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +177,8 @@
 				9E5426C523445894003C769A /* HouseshareTests */,
 				9E5426D023445894003C769A /* HouseshareUITests */,
 				9E5426AC23445891003C769A /* Products */,
+				4F079C5DF708B879CCFC2F85 /* Pods */,
+				F4595ED0AF3074BCEA4A2AC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,10 +199,11 @@
 				9E5426E1234458C0003C769A /* View */,
 				9E5426DF2344589F003C769A /* Model */,
 				9E5426AE23445891003C769A /* AppDelegate.swift */,
-				9E5426B823445894003C769A /* Assets.xcassets */,
+				9E9B682D236FADAD006CAEE5 /* GoogleService-Info.plist */,
+				9E096993235BFEDC004C0FF8 /* Assets.xcassets */,
 				9E5426BA23445894003C769A /* LaunchScreen.storyboard */,
 				9E5426BD23445894003C769A /* Info.plist */,
-				9E5426B523445891003C769A /* Houseshare.xcdatamodeld */,
+				9E096991235BFE0D004C0FF8 /* AppIcon.png */,
 			);
 			path = Houseshare;
 			sourceTree = "<group>";
@@ -170,12 +229,22 @@
 		9E5426DF2344589F003C769A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9E6C37222352B62D005DFF73 /* PaymentOption.swift */,
-				9E5426E223445C9A003C769A /* Bills.swift */,
-				9E62DC4923502D2000BB07D1 /* Profile.swift */,
-				9EEE68A12355D4BE00DB0968 /* Chore.swift */,
+				9E4E4FFC235ECF8500837A5B /* PaymentOption+CoreDataClass.swift */,
+				9E4E4FFD235ECF8500837A5B /* PaymentOption+CoreDataProperties.swift */,
+				9E4E4FFE235ECF8500837A5B /* Bills+CoreDataClass.swift */,
+				9E4E4FFF235ECF8500837A5B /* Bills+CoreDataProperties.swift */,
+				9E4E5000235ECF8500837A5B /* Profile+CoreDataClass.swift */,
+				9E4E5001235ECF8500837A5B /* Profile+CoreDataProperties.swift */,
+				9E4E5002235ECF8500837A5B /* Chore+CoreDataClass.swift */,
+				9E4E5003235ECF8500837A5B /* Chore+CoreDataProperties.swift */,
+				9E5426B523445891003C769A /* Houseshare.xcdatamodeld */,
+				9E4E500C235ED71400837A5B /* BillManager.swift */,
+				9E4E500E235ED93F00837A5B /* ContactsManager.swift */,
+				9EC71BF6235FF52600F7C810 /* ChoreManager.swift */,
+				9EC71BFE2361577B00F7C810 /* PaymentOptionManager.swift */,
 			);
-			path = Model;
+			name = Model;
+			path = Model.swift;
 			sourceTree = "<group>";
 		};
 		9E5426E0234458B9003C769A /* ViewModel */ = {
@@ -187,8 +256,10 @@
 				9EB97D4B234D56AE00239ADA /* BillAddViewController.swift */,
 				9E62DC4D23503BF700BB07D1 /* ContactsViewModel.swift */,
 				9E62DC4B23503BA800BB07D1 /* ContactsTableViewController.swift */,
+				9EC71C062362A0D500F7C810 /* ContactEditPopover.swift */,
 				9E6C37302352FA21005DFF73 /* ContactDetailViewController.swift */,
 				9E6C37262352BD00005DFF73 /* ContactAddViewController.swift */,
+				9EC71BFA2360354E00F7C810 /* PaymentOptionsViewModel.swift */,
 				9E6C37282352E11B005DFF73 /* PaymentPopupViewController.swift */,
 				9E6C372E2352EF94005DFF73 /* PaymentOptionCell.swift */,
 				9EEE68A32355D66100DB0968 /* ChoreViewModel.swift */,
@@ -197,6 +268,8 @@
 				9EEE68AC2355F5B300DB0968 /* MyChoreTableViewController.swift */,
 				9ECE37422359793F003B7E0C /* ChoreHistoryViewController.swift */,
 				9ECE37442359841E003B7E0C /* ReminderViewController.swift */,
+				9E096995235C2ABF004C0FF8 /* AboutUsViewController.swift */,
+				9EC71C042361DB0800F7C810 /* FileViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -209,6 +282,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F4595ED0AF3074BCEA4A2AC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EC7C435CD17F2A49B590B39 /* Pods_Houseshare.framework */,
+				3D1D7701589EDE9F173D7322 /* Pods_Houseshare_HouseshareUITests.framework */,
+				B27F9CE1CE94C1A2C3C61B21 /* Pods_HouseshareTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,9 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E5426D623445894003C769A /* Build configuration list for PBXNativeTarget "Houseshare" */;
 			buildPhases = (
+				E6A297F3FD0635F5CE04BB71 /* [CP] Check Pods Manifest.lock */,
 				9E5426A723445891003C769A /* Sources */,
 				9E5426A823445891003C769A /* Frameworks */,
 				9E5426A923445891003C769A /* Resources */,
+				075B74D053B61FDFF7CC8AA1 /* [CP] Embed Pods Frameworks */,
+				0FD883462D53DE2C4A80ADAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +319,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E5426D923445894003C769A /* Build configuration list for PBXNativeTarget "HouseshareTests" */;
 			buildPhases = (
+				8009C08D1BB1BE4BD2A789E8 /* [CP] Check Pods Manifest.lock */,
 				9E5426BE23445894003C769A /* Sources */,
 				9E5426BF23445894003C769A /* Frameworks */,
 				9E5426C023445894003C769A /* Resources */,
@@ -251,9 +338,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E5426DC23445894003C769A /* Build configuration list for PBXNativeTarget "HouseshareUITests" */;
 			buildPhases = (
+				FC788EAF66E1ADFB6F394125 /* [CP] Check Pods Manifest.lock */,
 				9E5426C923445894003C769A /* Sources */,
 				9E5426CA23445894003C769A /* Frameworks */,
 				9E5426CB23445894003C769A /* Resources */,
+				61C558553AA4F3F825C9E8C2 /* [CP] Embed Pods Frameworks */,
+				5BD1B6B5063D5C34AF8CD7C2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,8 +404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E5426BC23445894003C769A /* LaunchScreen.storyboard in Resources */,
-				9E5426B923445894003C769A /* Assets.xcassets in Resources */,
 				9E5426B423445891003C769A /* Main.storyboard in Resources */,
+				9E9B682E236FADAD006CAEE5 /* GoogleService-Info.plist in Resources */,
+				9E096994235BFEDC004C0FF8 /* Assets.xcassets in Resources */,
+				9E096992235BFE0D004C0FF8 /* AppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,32 +427,181 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		075B74D053B61FDFF7CC8AA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare/Pods-Houseshare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare/Pods-Houseshare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Houseshare/Pods-Houseshare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FD883462D53DE2C4A80ADAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare/Pods-Houseshare-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare/Pods-Houseshare-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Houseshare/Pods-Houseshare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BD1B6B5063D5C34AF8CD7C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61C558553AA4F3F825C9E8C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Houseshare-HouseshareUITests/Pods-Houseshare-HouseshareUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8009C08D1BB1BE4BD2A789E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HouseshareTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A297F3FD0635F5CE04BB71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Houseshare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC788EAF66E1ADFB6F394125 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Houseshare-HouseshareUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9E5426A723445891003C769A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9EEE68AD2355F5B300DB0968 /* MyChoreTableViewController.swift in Sources */,
+				9E4E500A235ECF8500837A5B /* Chore+CoreDataClass.swift in Sources */,
 				9EEE68A92355DAF200DB0968 /* ChoresTableViewController.swift in Sources */,
+				9E4E500F235ED93F00837A5B /* ContactsManager.swift in Sources */,
 				9ECE37432359793F003B7E0C /* ChoreHistoryViewController.swift in Sources */,
-				9E5426E323445C9A003C769A /* Bills.swift in Sources */,
+				9EC71BF7235FF52600F7C810 /* ChoreManager.swift in Sources */,
 				9E62DC4E23503BF700BB07D1 /* ContactsViewModel.swift in Sources */,
+				9EC71BFF2361577B00F7C810 /* PaymentOptionManager.swift in Sources */,
 				9E6C37312352FA21005DFF73 /* ContactDetailViewController.swift in Sources */,
-				9EEE68A22355D4BF00DB0968 /* Chore.swift in Sources */,
-				9E62DC4A23502D2000BB07D1 /* Profile.swift in Sources */,
+				9E4E500D235ED71400837A5B /* BillManager.swift in Sources */,
 				9ECE37452359841E003B7E0C /* ReminderViewController.swift in Sources */,
 				9EB97D4C234D56AE00239ADA /* BillAddViewController.swift in Sources */,
 				9EEE68A42355D66100DB0968 /* ChoreViewModel.swift in Sources */,
 				9E5426B723445891003C769A /* Houseshare.xcdatamodeld in Sources */,
+				9EC71BFB2360354E00F7C810 /* PaymentOptionsViewModel.swift in Sources */,
+				9E4E5009235ECF8500837A5B /* Profile+CoreDataProperties.swift in Sources */,
 				9E5426E7234466F3003C769A /* BillViewModel.swift in Sources */,
 				9EEE68B12356D90D00DB0968 /* ChoreAddViewController.swift in Sources */,
+				9EC71C052361DB0800F7C810 /* FileViewController.swift in Sources */,
+				9E4E5005235ECF8500837A5B /* PaymentOption+CoreDataProperties.swift in Sources */,
+				9E4E5004235ECF8500837A5B /* PaymentOption+CoreDataClass.swift in Sources */,
 				9E5426B123445891003C769A /* ViewController.swift in Sources */,
 				9E5426EB23446DC6003C769A /* BillTableViewController.swift in Sources */,
-				9E6C37232352B62D005DFF73 /* PaymentOption.swift in Sources */,
+				9E4E5006235ECF8500837A5B /* Bills+CoreDataClass.swift in Sources */,
+				9E096996235C2ABF004C0FF8 /* AboutUsViewController.swift in Sources */,
+				9E4E5007235ECF8500837A5B /* Bills+CoreDataProperties.swift in Sources */,
 				9E6C372F2352EF94005DFF73 /* PaymentOptionCell.swift in Sources */,
+				9E4E5008235ECF8500837A5B /* Profile+CoreDataClass.swift in Sources */,
+				9EC71C072362A0D500F7C810 /* ContactEditPopover.swift in Sources */,
 				9E5426AF23445891003C769A /* AppDelegate.swift in Sources */,
 				9E6C37292352E11B005DFF73 /* PaymentPopupViewController.swift in Sources */,
 				9E62DC4C23503BA800BB07D1 /* ContactsTableViewController.swift in Sources */,
+				9E4E500B235ECF8500837A5B /* Chore+CoreDataProperties.swift in Sources */,
 				9E6C37272352BD00005DFF73 /* ContactAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +775,7 @@
 		};
 		9E5426D723445894003C769A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879B84F9F6ABABDB9BF9ED40 /* Pods-Houseshare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +794,7 @@
 		};
 		9E5426D823445894003C769A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F2BB5659ABD1EE73FA2EE2E /* Pods-Houseshare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -570,6 +813,7 @@
 		};
 		9E5426DA23445894003C769A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A953CCC7B90D7B275EF57A9 /* Pods-HouseshareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -590,6 +834,7 @@
 		};
 		9E5426DB23445894003C769A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A323DB58BE8E2491449A515 /* Pods-HouseshareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -610,6 +855,7 @@
 		};
 		9E5426DD23445894003C769A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF43DAA3E70D8E282C5F09A2 /* Pods-Houseshare-HouseshareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -629,6 +875,7 @@
 		};
 		9E5426DE23445894003C769A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB60FE5D9AA7F5C84ABCCA2 /* Pods-Houseshare-HouseshareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

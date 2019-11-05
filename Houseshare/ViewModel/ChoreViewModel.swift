@@ -10,16 +10,18 @@ import Foundation
 
 struct ChoreViewModel
 {
-    //This is connecting to the LKCharacter file in the Model folder
-    //This is private so that nothing can change the array
-    private (set) var chores:[Chore] = []
+    private var choreManager = ChoreManager.shared
     
+    var count:Int
+    {
+        return choreManager.chores.count
+    }
     //Counting our chores not yet completed
     var countActive:Int
     {
         var count:Int = 0
         
-        for chore in chores where chore.completed == false
+        for chore in choreManager.chores where chore.completed == false
         {
             count+=1
         }
@@ -32,7 +34,7 @@ struct ChoreViewModel
     {
         var count:Int = 0
         
-        for chore in chores where chore.completed == true
+        for chore in choreManager.chores where chore.completed == true
         {
             count+=1
         }
@@ -40,46 +42,23 @@ struct ChoreViewModel
         return count
     }
     
-    
-    init()
-    {
-        loadData()
-    }
-    
-    //this just populates our array
-    private mutating func loadData()
-    {
-        let calender = Calendar.current
-        var myDate = DateComponents(calendar: calender, year: 2019, month: 2, day: 12)
-        var newChore = Chore(choreName: "Clean Dishes", dueDate: calender.date(from: myDate)!, assignedUser: "Lana")
-        chores.append(newChore)
-        
-        myDate = DateComponents(calendar: calender, year: 2019, month: 3, day: 22)
-        newChore = Chore(choreName: "Vacuum House", dueDate: calender.date(from: myDate)!, assignedUser: "Mick")
-        newChore.choreCompleted()
-        chores.append(newChore)
-        
-        myDate = DateComponents(calendar: calender, year: 2019, month: 3, day: 1)
-        newChore = Chore(choreName: "Vacuum House", dueDate: calender.date(from: myDate)!, assignedUser: "Taylor")
-        chores.append(newChore)
-    }
-    
     func getChore(byIndex index:Int) -> Chore
     {
         // this will hold the selected profile chosen by index
-        let selectedChore = chores[index]
+        let selectedChore = choreManager.chores[index]
         
         //return the profile
         return selectedChore
     }
     
+    //return a chore array by selected user
     func getChores(byUser name:String) -> [Chore]
     {
         var usersChores:[Chore] = []
             
         for chore in self.getActiveChores()
         {
-            if chore.assignedUser == name
+            if "\(chore.assignedUser!.fname!) \(chore.assignedUser!.lname!)" == name
             {
                 usersChores.append(chore)
             }
@@ -88,11 +67,12 @@ struct ChoreViewModel
         return usersChores
     }
     
+    //return all the active chroes
     func getActiveChores() -> [Chore]
     {
         var activeChores:[Chore] = []
         
-        for chores in self.chores
+        for chores in choreManager.chores
         {
             if chores.completed == false
             {
@@ -103,11 +83,12 @@ struct ChoreViewModel
         return activeChores
     }
     
+    //return all the completed chores
     func getCompletedChores() -> [Chore]
     {
         var completedChores:[Chore] = []
         
-        for chores in self.chores
+        for chores in choreManager.chores
         {
             if chores.completed == true
             {
@@ -118,15 +99,16 @@ struct ChoreViewModel
         return completedChores
     }
     
-    
-    mutating func addChore(chore: Chore)
+    //add new chore
+    mutating func addChore(_ choreName:String, _ dueDate: Date, _ assignedUser:Profile)
     {
-        chores.append(chore)
+        choreManager.addChore(choreName, dueDate, assignedUser)
     }
     
+    //set a chore to complete
     func choreCompleted(byIndex index:Int)
     {
-        chores[index].choreCompleted()
+        choreManager.chores[index].completed = true
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 
 protocol AddBillDelegate
 {
-    func addNewBill(bill:Bills)
+    func addNewBill(_ billType:billType, _ dueDate:Date, _ amount:Double)
 }
 
 class BillTableViewController: UITableViewController
@@ -79,11 +79,35 @@ class BillTableViewController: UITableViewController
             type.text = currentBill.type
             dueDate.text = "Due: \(formattedDate.string(from: currentBill.dueDate))"
             amount.text = "$ \(currentBill.amount)"
-            logo.image = UIImage(named: currentBill.logo)
+            logo.image = UIImage(named: currentBill.logo.lowercased())
         }
         
         return cell
     }
+    
+    //select a bill at a row and present the actionsheet to delete the bill
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let removeBillAction = UIAlertAction(title: "Delete Bill", style: .destructive, handler:
+        {
+            (action:UIAlertAction) in
+            self.viewModel.removeBill(index:indexPath.row)
+            self.loadView()
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(removeBillAction)
+        actionSheet.addAction(cancelAction)
+        
+        
+        self.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    
     
 }
 
@@ -93,9 +117,9 @@ extension BillTableViewController: AddBillDelegate
     //but will use this just to show extensions
     
     //calls the protocol
-    func addNewBill(bill: Bills)
+    func addNewBill(_ billType:billType, _ dueDate:Date, _ amount:Double)
     {
-        viewModel.addBill(bill: bill)
+        viewModel.addBill(billType, dueDate, amount)
         //refresh the view so we can see the new bill added
         self.loadView()
     }

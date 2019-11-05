@@ -12,9 +12,8 @@ import UIKit
 protocol ChoreDelegate
 {
     func updateChore(completedChore: Chore)
-    func addChore(newChore: Chore)
+    func addChore(_ choreName:String, _ dueDate:Date, _ assignedUser:Profile)
 }
-
 
 class ChoresTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
@@ -89,6 +88,8 @@ class ChoresTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         let activeChores:[Chore] = viewModel.getActiveChores()
         
+        
+        
             
         //We must unwrap the variables we just made
         //This ensures that this is executed as long as they are ALL not nil
@@ -106,8 +107,11 @@ class ChoresTableViewController: UIViewController, UITableViewDataSource, UITabl
                         
                 //setting the storyboard elements to the data that we are getting from the model
                 name.text = currentChore.choreName
-                dueDate.text = "Due: \(formattedDate.string(from: currentChore.dueDate))"
-                assignedUser.text = "Assigned to: \(currentChore.assignedUser)"
+                dueDate.text = "Due: \(formattedDate.string(from: currentChore.dueDate! as Date))"
+                
+                assignedUser.text = "\(currentChore.assignedUser!.fname!) \(currentChore.assignedUser!.lname!)"
+                
+                
                 return cell
                 
             }
@@ -123,20 +127,19 @@ extension ChoresTableViewController: ChoreDelegate
 {
     func updateChore(completedChore: Chore)
     {
-        for chore in viewModel.chores
+        for chore in viewModel.getActiveChores()
         {
-            if chore.choreDetails() == completedChore.choreDetails()
+            if chore.choreName == completedChore.choreName
             {
-                chore.choreCompleted()
+                chore.completed = true
             }
         }
         ChoresTable.reloadData()
     }
     
-    func addChore(newChore: Chore)
+    func addChore(_ choreName:String, _ dueDate:Date, _ assignedUser:Profile)
     {
-        viewModel.addChore(chore: newChore)
-        print(viewModel.getChores(byUser: "Taylor").count)
+        viewModel.addChore(choreName, dueDate, assignedUser)
         ChoresTable.reloadData()
         
     }

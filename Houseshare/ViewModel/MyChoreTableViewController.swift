@@ -12,7 +12,7 @@ class MyChoreTableViewController: UITableViewController
 {
     var viewModel = ChoreViewModel()
     var delegate:ChoreDelegate?
-    var userName = "Taylor"
+    var userName = "Johnno Tassoni"
     private (set) var usersChores:[Chore] = []
     
 
@@ -31,7 +31,6 @@ class MyChoreTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        print(usersChores.count)
         return usersChores.count
     }
     
@@ -48,7 +47,7 @@ class MyChoreTableViewController: UITableViewController
         
         if let name = name, let assignedUser = assignedUser, let dueDate = dueDate
         {
-            //index path starts at 0 and goes up for the amount of characters/rows,
+            //index path starts at 0 and goes up for the amount of rows,
             //we are using this num to get our characters
            
                 let currentChore = usersChores[indexPath.row]
@@ -58,8 +57,8 @@ class MyChoreTableViewController: UITableViewController
             
                 //setting the storyboard elements to the data that we are getting from the model
                 name.text = currentChore.choreName
-                dueDate.text = "Due: \(formattedDate.string(from: currentChore.dueDate))"
-                assignedUser.text = "Assigned to: \(currentChore.assignedUser)"
+                dueDate.text = "Due: \(formattedDate.string(from: currentChore.dueDate as! Date))"
+                assignedUser.text = "Assigned to: \(currentChore.assignedUser!.fname!) \(currentChore.assignedUser!.lname!)"
             
             
         }

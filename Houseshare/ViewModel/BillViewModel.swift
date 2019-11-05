@@ -13,38 +13,17 @@ struct BillViewModel
 {
     //This is connecting to the LKCharacter file in the Model folder
     //This is private so that nothing can change the array
-    private (set) var bills:[Bills] = []
+    private var billManager = BillManager.shared
     
     //This will help with knowing how many characters we have
     var count:Int
     {
-        return bills.count
+        return billManager.bills.count
     }
     
-    init()
+    var bills:[Bills]
     {
-        loadData()
-    }
-    
-    //this just populates our array
-    private mutating func loadData()
-    {
-        let calender = Calendar.current
-        var myDate = DateComponents(calendar: calender, year: 2019, month: 2, day: 12)
-        var newBill = Bills(type: .Internet, dueDate: calender.date(from: myDate)!, amount: 99.99)
-        bills.append(newBill)
-        
-        myDate = DateComponents(calendar: calender, year: 2019, month: 3, day: 12)
-        newBill = Bills(type: .Gas, dueDate: calender.date(from: myDate)!, amount: 45.99)
-        bills.append(newBill)
-        
-        myDate = DateComponents(calendar: calender, year: 2019, month: 2, day: 5)
-        newBill = Bills(type: .Power, dueDate: calender.date(from: myDate)!, amount: 321.79)
-        bills.append(newBill)
-        
-        myDate = DateComponents(calendar: calender, year: 2019, month: 3, day: 12)
-        newBill = Bills(type: .Internet, dueDate: calender.date(from: myDate)!, amount: 99.99)
-        bills.append(newBill)
+        return billManager.bills
     }
     
     //this function will as for an index (byIndex) and return a tuple
@@ -52,19 +31,27 @@ struct BillViewModel
     func getBill(byIndex index:Int) -> (type:String, dueDate:Date, amount:String, logo:String)
     {
         //creating internal vars that we will assigne the values we need acording to the index provided
-        let type = bills[index].type.rawValue
-        let dueDate = bills[index].dueDate
-        let amount = String(bills[index].amount)
-        let logo = bills[index].type.logo
+        let type = billManager.bills[index].billType!
+        let dueDate = billManager.bills[index].dueDate! as Date
+        let amount = String(billManager.bills[index].amount)
+        let logo = billManager.bills[index].billType!
         
         //return these as a tuple
         return(type, dueDate, amount, logo)
     }
     
-    mutating func addBill(bill:Bills)
+    mutating func addBill(_ billType: billType, _ dueDate: Date, _ amount: Double)
     {
     
-        bills.append(bill)
+        billManager.addBill(billType, dueDate, amount)
         
     }
+    
+    mutating func removeBill(index:Int)
+    {
+        billManager.removeBill(index)
+    }
+    
+
 }
+

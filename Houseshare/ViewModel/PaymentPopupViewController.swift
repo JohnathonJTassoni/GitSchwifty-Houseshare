@@ -32,10 +32,9 @@ class PaymentPopupViewController: UIViewController {
         if let bsb = bsbField.text, let accNum = accNumField.text, let name = nameField.text
         {
             //create new option
-            let newPaymentOption = PaymentOption(BSB: bsb, accNum: accNum, name: name)
             
             //pass to protocol function
-            delegate?.addPaymentOption(paymentOption: newPaymentOption)
+            delegate?.addPaymentOption(bsb, name, accNum)
         }
         
         dismiss(animated: true)
@@ -44,5 +43,11 @@ class PaymentPopupViewController: UIViewController {
     @IBAction func cancel(_ sender: Any)
     {
         dismiss(animated: true)
+    }
+    
+    //Remove keyboard when another part of the storyboard is tappped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        self.view.endEditing(true)
     }
 }

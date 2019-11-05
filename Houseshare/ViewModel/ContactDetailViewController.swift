@@ -28,8 +28,8 @@ class ContactDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
         if let selectedProfile = selectedProfile
         {
-            profilePic.image = selectedProfile.userImage
-            name.text = "\(selectedProfile.fname) \(selectedProfile.lname)"
+            profilePic.image = UIImage(data: selectedProfile.userImage! as Data)
+            name.text = "\(selectedProfile.fname!) \(selectedProfile.lname!)"
             email.text = selectedProfile.email
             phone.text = selectedProfile.pnum
             
@@ -43,7 +43,7 @@ class ContactDetailViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         //we will return the count
-        if let count = selectedProfile?.paymentDetails.count
+        if let count = selectedProfile?.paymentDetails?.count
         {
             return count
         }
@@ -65,9 +65,9 @@ class ContactDetailViewController: UIViewController, UITableViewDelegate, UITabl
         let accNum = cell.viewWithTag(6002) as? UILabel
             
         //Assigning the acc num and name that is the current index
-        accName?.text = selectedProfile?.paymentDetails[indexPath.row].accName
-        accNum?.text = selectedProfile?.paymentDetails[indexPath.row].accNum
-        bsb?.text = selectedProfile?.paymentDetails[indexPath.row].BSB
+        accName?.text = selectedProfile?.paymentDetailArray()[indexPath.row].accName
+        accNum?.text = selectedProfile?.paymentDetailArray()[indexPath.row].accNum
+        bsb?.text = selectedProfile?.paymentDetailArray()[indexPath.row].bsb
             
         return cell
     }
